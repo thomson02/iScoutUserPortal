@@ -2,7 +2,7 @@
   "name": "node-example",
   "version": "0.0.1",
   "dependencies": {
-    "connect": "latest",
+    "connect": "1.8.5",
     "mongodb": "latest"
   }
 }
