@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/hello/:name', function(request, response){
-    request.send('hello ' + request.params.name);
+    response.send('hello ' + request.params.name);
 });
 
 var port = process.env.PORT || 5000;
