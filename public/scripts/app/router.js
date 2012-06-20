@@ -1,6 +1,6 @@
 // The backbone router
 define([
-    'jQueryWithBackbone',
+    'jQueryWithBootstrap',
     'Underscore',
     'Backbone'
 ],
