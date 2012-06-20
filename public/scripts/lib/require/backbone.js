@@ -1,6 +1,6 @@
 define([
 // Load the original jQuery source file
-    'order!lib/backbone/backbone-min'
+    'order!lib/backbone/backbone'
 ], function(){
     // Now that all the orignal source codes have ran and accessed each other
     // We can call noConflict() to remove them from the global name space
