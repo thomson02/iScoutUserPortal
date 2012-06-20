@@ -11,9 +11,9 @@ require.config({
 });
 
 require([
-    'order!jQueryWithBootstrap',
-    'order!Underscore',
-    'order!Backbone',
+    'order!lib/require/jqueryWithBootstrap',
+    'order!lib/underscore/underscore',
+    'order!lib/backbone/backbone-min',
     'order!app/router'
 ],
     function($, _, Backbone, Router) {
