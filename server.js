@@ -6,8 +6,6 @@ app.configure(function(){
         app.set("view options", { layout: false, pretty: true });
         app.use(express.favicon());
         app.use(express.static(__dirname + '/public'));
-        app.use(express.bodyParser());
-        app.use(app.router);
     }
 );
 
