@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>User Account - Bootstrap Admin</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">    
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    
+    <link href="css/adminia.css" rel="stylesheet"> 
+    <link href="css/adminia-responsive.css" rel="stylesheet"> 
+    
+    
+    <link href="css/pages/plans.css" rel="stylesheet"> 
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+  </head>
+
+<body>
+	
+<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 				
+			</a>
+			
+			<a class="brand" href="index.html">gotWoggle</a>
+			
+			<div class="nav-collapse">
+			
+				<ul class="nav pull-right">
+					<li>
+						<a href="#"><span class="badge badge-warning">7</span></a>
+					</li>
+					
+					<li class="divider-vertical"></li>
+					
+					<li class="dropdown">
+						
+						<a data-toggle="dropdown" class="dropdown-toggle " href="#">
+							Andrew Thomson <b class="caret"></b>
+						</a>
+						
+						<ul class="dropdown-menu">
+							<li>
+								<a href="account.html"><i class="icon-user"></i> Account Setting  </a>
+							</li>
+							
+							<li>
+								<a href="change_password.html"><i class="icon-lock"></i> Change Password</a>
+							</li>
+							
+							<li class="divider"></li>
+							
+							<li>
+								<a href="index.html"><i class="icon-off"></i> Logout</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div> <!-- /nav-collapse -->
+			
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+
+
+
+
+<div id="content">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="span3">
+				
+				<div class="account-container">
+				
+					<div class="account-avatar">
+						<img src="img/gravatar.jpg" alt="" class="thumbnail" />
+					</div> <!-- /account-avatar -->
+				
+					<div class="account-details">
+					
+						<span class="account-name">Andrew Thomson</span>
+						
+						<span class="account-role">Scout Leader</span>
+						
+						<span class="account-actions">
+							<a href="javascript:;">Profile</a> |
+							
+							<a href="javascript:;">Edit Settings</a>
+						</span>
+					
+					</div> <!-- /account-details -->
+				
+				</div> <!-- /account-container -->
+				
+				<hr />
+
+                <ul id="main-nav" class="nav nav-tabs nav-stacked">
+
+                    <li>
+                        <a href="index.html">
+                            <i class="icon-home"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="contacts.html">
+                            <i class="icon-user"></i>
+                            Contacts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="medical.html">
+                            <i class="icon-heart"></i>
+                            Medical Info
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="grid.html">
+                            <i class="icon-check"></i>
+                            Consents
+                            <span class="label label-warning pull-right">5</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="charts.html">
+                            <i class="icon-shopping-cart"></i>
+                            Payments
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="account.html">
+                            <i class="icon-list-alt"></i>
+                            Logbook
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">
+                            <i class="icon-book"></i>
+                            Badge Library
+                        </a>
+                    </li>
+
+                </ul>
+
+
+
+                <hr />
+				
+				<div class="sidebar-extra">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+				</div> <!-- .sidebar-extra -->
+				
+				<br />
+		
+			</div> <!-- /span3 -->
+			
+			
+			
+			<div class="span9">
+				
+				<h1 class="page-title">
+					<i class="icon-user"></i>
+					Contacts
+				</h1>
+				
+				
+				<div class="row">
+					
+					<div class="span9">
+				
+						<div class="widget">
+							
+							<div class="widget-header">
+								<h3>Basic Contact Details</h3>
+							</div> <!-- /widget-header -->
+									
+							<div class="widget-content">
+								
+								
+								
+								<div class="tabbable">
+						<ul class="nav nav-tabs">
+						  <li class="active">
+						    <a href="#1" data-toggle="tab">Member</a>
+						  </li>
+						  <li><a href="#2" data-toggle="tab">Parental</a></li>
+                            <li><a href="#3" data-toggle="tab">Emergency</a></li>
+						</ul>
+						
+						<br>
+						
+							<div class="tab-content">
+								<div class="tab-pane active" id="1">
+								<form id="edit-profile" class="form-horizontal">
+									<fieldset>
+
+										<div class="control-group">											
+											<label class="control-label" for="firstname">First Name</label>
+											<div class="controls">
+												<input type="text" class="input-medium" id="firstname" value="Rod">
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										
+										<div class="control-group">											
+											<label class="control-label" for="lastname">Last Name</label>
+											<div class="controls">
+												<input type="text" class="input-medium" id="lastname" value="Howard">
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+
+                                        <div class="control-group">
+                                            <label class="control-label" for="address">Address</label>
+                                            <div class="controls">
+                                                <textarea class="input-xlarge" id="address"></textarea>
+                                            </div> <!-- /controls -->
+                                        </div> <!-- /control-group -->
+
+                                        <div class="control-group">
+                                            <label class="control-label" for="dob">Date of Birth</label>
+                                            <div class="controls">
+                                                <input id="dob"  class="input-medium" type="text" placeholder="DD/MM/YYYY" />
+                                            </div>
+                                        </div>
+
+										<div class="control-group">											
+											<label class="control-label" for="email">Email Address</label>
+											<div class="controls">
+												<input type="text" class="input-large" id="email" value="rod.howard@example.com">
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+
+                                        <div class="control-group">
+                                            <label class="control-label" for="phone">Phone</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-large" id="phone">
+                                            </div> <!-- /controls -->
+                                        </div> <!-- /control-group -->
+
+                                        <div class="control-group">
+                                            <label class="control-label" for="mobile">Mobile</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-large" id="mobile">
+                                            </div> <!-- /controls -->
+                                        </div> <!-- /control-group -->
+
+									</fieldset>
+								</form>
+								</div>
+								
+								<div class="tab-pane" id="2">
+									<form id="edit-profile2" class="form-horizontal">
+										<fieldset>
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="firstname2">First Name</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-medium" id="firstname2" value="Rod">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="lastname2">Last Name</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-medium" id="lastname2" value="Howard">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="address2">Address</label>
+                                                <div class="controls">
+                                                    <textarea class="input-xlarge" id="address2"></textarea>
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="email2">Email Address</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large" id="email2" value="rod.howard@example.com">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="phone2">Phone</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large" id="phone2">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="mobile2">Mobile</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large" id="mobile2">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="occupation">Occupation</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large" id="occupation">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="skills">Skills/Hobbies</label>
+                                                <div class="controls">
+                                                    <textarea class="input-xlarge" id="skills"></textarea>
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+											<div class="control-group">
+												<label class="control-label" for="assist">Can Assist Group</label>
+												<div class="controls">
+													<label class="checkbox">
+														<input type="checkbox" name="assist" value="yes" checked="checked" id="assist">
+														Yes, I will be able to assist
+													</label>
+													<label class="checkbox">
+														<input type="checkbox" name="assist" value="no">
+														I am unable to assist the Group
+													</label>
+												</div>
+											</div>
+
+										</fieldset>
+									</form>
+								</div>
+
+                                <div class="tab-pane" id="3">
+                                    <form id="edit-profile3" class="form-horizontal">
+                                        <fieldset>
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="firstname3">First Name</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-medium" id="firstname3" value="Rod">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="lastname3">Last Name</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-medium" id="lastname3" value="Howard">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="relation">Relation</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large" id="relation">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="address3">Address</label>
+                                                <div class="controls">
+                                                    <textarea class="input-xlarge" id="address3"></textarea>
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="phone3">Phone</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large" id="phone3">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="mobile3">Mobile</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large" id="mobile3">
+                                                </div> <!-- /controls -->
+                                            </div> <!-- /control-group -->
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+							</div>
+						  
+						  
+						</div>
+								
+								
+								
+								
+								
+								
+								
+								
+							</div> <!-- /widget-content -->
+							
+						</div> <!-- /widget -->
+						
+					</div> <!-- /span9 -->
+					
+				</div> <!-- /row -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div> <!-- /span9 -->
+			
+			
+		</div> <!-- /row -->
+		
+	</div> <!-- /container -->
+	
+</div> <!-- /content -->
+					
+	
+<div id="footer">
+	
+	<div class="container">				
+		<hr>
+		<p>&copy; 2012 Go Ideate.</p>
+	</div> <!-- /container -->
+	
+</div> <!-- /footer -->
+
+
+    
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.7.2.min.js"></script>
+
+
+<script src="js/bootstrap.js"></script>
+
+  </body>
+</html>
+
+<!-- Localized -->
