@@ -1,8 +1,8 @@
 // The backbone router
 define([
-    'jQueryWithBootstrap',
-    'Underscore',
-    'Backbone'
+    'order!lib/require/jQueryWithBootstrap',
+    'order!Underscore',
+    'order!Backbone'
 ],
     function(
         $,
