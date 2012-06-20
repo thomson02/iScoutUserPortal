@@ -2,7 +2,7 @@
 require.config({
     baseUrl: "/scripts/",
     paths: {
-        jQueryWithBootstrap: 'lib/require/jqueryWithBootstrap',
+        jQueryWithBootstrap: 'lib/require/jQueryWithBootstrap',
         Underscore: 'lib/require/underscore',
         Backbone: 'lib/require/backbone',
         order: 'lib/require/plugins/order',
@@ -11,7 +11,7 @@ require.config({
 });
 
 require([
-    'order!lib/require/jqueryWithBootstrap',
+    'order!lib/require/jQueryWithBootstrap',
     'order!lib/underscore/underscore-min',
     'order!lib/backbone/backbone',
     'order!app/router'
