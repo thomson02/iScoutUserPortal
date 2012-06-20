@@ -9,10 +9,7 @@ app.configure(function(){
     }
 );
 
-app.get('/', function(request, response) {
-    response.render('index.html');
-   // response.send('Hello World!');
-});
+
 
 app.get('/hello/:name', function(request, response){
     response.send('hello ' + request.params.name);
