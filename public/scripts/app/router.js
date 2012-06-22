@@ -1,22 +1,30 @@
 // The backbone router
 define([
-    'order!lib/require/jQueryWithBootstrap',
-    'order!lib/require/underscore',
-    'order!lib/require/backbone'
+    'jQueryWithBootstrap',
+    'underscore',
+    'backbone',
+    'text!app/templates/shared/accountDetails.html'
 ],
     function(
         $,
         _,
-        Backbone) {
+        Backbone,
+        AccountDetailsTemplate) {
 
         var AppRouter = Backbone.Router.extend({
             routes: {
                 // Catch All
+                'dashboard': 'dashboard',
                 '*actions': 'defaultAction'
             },
 
             initialize: function() {
-                alert("Init page frame");
+                //alert("Init page frame");
+                $("#accountDetails").html(AccountDetailsTemplate);
+            },
+
+            dashboard: function(){
+
             },
 
             defaultAction: function(actions) {
@@ -27,7 +35,7 @@ define([
 
         var initialize = function(session) {
             var appRouter = new AppRouter();
-            Backbone.history.start();
+            Backbone.history.start({});
             return appRouter;
         };
 
