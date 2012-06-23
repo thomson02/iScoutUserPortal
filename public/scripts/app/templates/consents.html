@@ -1,0 +1,100 @@
+<div class="widget">
+<div class="widget-header">
+    <h3>Consent Forms</h3>
+</div> <!-- /widget-header -->
+<div class="widget-content">
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#cocTab" data-toggle="tab">Code of Conduct</a></li>
+            <li><a href="#photoTab" data-toggle="tab">Photo</a></li>
+            <li><a href="#activityTab" data-toggle="tab">Activity</a></li>
+            <li><a href="#medicalTab" data-toggle="tab">Medical</a></li>
+            <li><a href="#giftAidTab" data-toggle="tab">Gift Aid</a></li>
+        </ul>
+
+        <br>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="cocTab">
+                <p>We have read, understood and agree to the conditions laid out in the Code of Conduct, Disciplinary Procedures and Welcome Pack.</p>
+                <br />
+                <form id="" class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="agree">Member agreement</label>
+                        <div class="controls">
+                            <input type="checkbox" id="agree" <% if (coc.member) { print('checked="checked"'); } %> />
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+                    <div class="control-group">
+                        <label class="control-label" for="pagree">Parental agreement</label>
+                        <div class="controls">
+                            <input type="checkbox" id="pagree" <% if (coc.parent) { print('checked="checked"'); } %>/>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+                </form>
+            </div>
+
+            <div class="tab-pane" id="photoTab">
+                <p>I hereby give my permission for my child to be photographed/videoed during Scout activities and for those photographs/video footage to be used to publicise and display the achievements of 2nd Bothwell Scout Group and the Scouting Association. I understand this form shall remain valid until the Group are advised in writing otherwise. Your child’s full name will not be used in any publication.</p>
+                <br />
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="photo">I give consent</label>
+                        <div class="controls">
+                            <input type="checkbox" id="photo" <% if (photo) { print('checked="checked"'); } %>/>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+                </form>
+            </div>
+
+            <div class="tab-pane" id="activityTab">
+                <p>I understand that Scouting activities may on occasion take place outwith the designated Scout Hall during general weekly meetings and give consent for my child to participate in all the activities of the troop. All activities are run in accordance with the Scout Association rules.</p>
+                <br />
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="activity">I give consent</label>
+                        <div class="controls">
+                            <input type="checkbox" id="activity" <% if (activity) { print('checked="checked"'); } %>/>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+                </form>
+            </div>
+
+            <div class="tab-pane" id="medicalTab">
+                <p>If it becomes necessary for the above named young person to receive medical treatment and I cannot be contacted to authorise this, I hereby give my general consent to any necessary medical treatment and authorise the Leader in charge to sign any document required by the hospital authorities.</p>
+                <br />
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="medical">I give consent</label>
+                        <div class="controls">
+                            <input type="checkbox" id="medical" <% if (medical) { print('checked="checked"'); } %> />
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+                </form>
+            </div>
+
+            <div class="tab-pane" id="giftAidTab">
+                <p>Please treat as Gift Aid donations all qualifying gifts of money made.</p>
+                <br />
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="giftAidPast">In the past 4 years</label>
+                        <div class="controls">
+                            <input type="checkbox" id="giftAidPast" <% if (giftAid.past) { print('checked="checked"'); } %>/>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+                    <div class="control-group">
+                        <label class="control-label" for="giftAidFuture">All future payments</label>
+                        <div class="controls">
+                            <input type="checkbox" id="giftAidFuture" <% if (giftAid.present) { print('checked="checked"'); } %>/>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+                </form>
+                <p>I confirm I have paid or will pay an amount of Income Tax and/or Capital Gains Tax for each tax year that is at least equal to the amount of tax that all the charities that I donate to will reclaim on my gifts for that tax year. I understand that other taxes such as VAT and Council Tax do not qualify. I understand the charity will reclaim 28p of tax on every £1 that I gave up to 5 April 2008 and will reclaim 25p of tax on every £1 that I give on or after 6 April 2008.</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>

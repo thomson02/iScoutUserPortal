@@ -1,0 +1,203 @@
+<div class="widget">
+    <div class="widget-header">
+        <h3>Basic Contact Details</h3>
+    </div> <!-- /widget-header -->
+    <div class="widget-content">
+        <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#memberTab" data-toggle="tab">Member</a></li>
+            <li><a href="#parentalTab" data-toggle="tab">Parental</a></li>
+            <li><a href="#emergencyTab" data-toggle="tab">Emergency</a></li>
+        </ul>
+
+        <br>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="memberTab">
+                <form class="form-horizontal">
+                    <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="firstname">First Name</label>
+                        <div class="controls">
+                            <input type="text" class="input-medium" id="firstname" value="<%= member.firstname %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+
+                    <div class="control-group">
+                        <label class="control-label" for="lastname">Last Name</label>
+                        <div class="controls">
+                            <input type="text" class="input-medium" id="lastname" value="<%= member.lastname %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="address">Address</label>
+                        <div class="controls">
+                            <textarea class="input-xlarge" id="address"><%= member.address %></textarea>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="dob">Date of Birth</label>
+                        <div class="controls">
+                            <input id="dob"  class="input-medium" type="text" placeholder="DD/MM/YYYY"  value="<%= member.dob %>"/>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="email">Email Address</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="email" value="<%= member.email %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="phone">Phone</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="phone" value="<%= member.phone %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="mobile">Mobile</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="mobile" value="<%= member.mobile %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                </fieldset>
+                </form>
+            </div>
+
+            <div class="tab-pane" id="parentalTab">
+                <form class="form-horizontal">
+                    <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="firstname2">First Name</label>
+                        <div class="controls">
+                            <input type="text" class="input-medium" id="firstname2" value="<%= parental.firstname %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+
+                    <div class="control-group">
+                        <label class="control-label" for="lastname2">Last Name</label>
+                        <div class="controls">
+                            <input type="text" class="input-medium" id="lastname2" value="<%= parental.lastname %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="address2">Address</label>
+                        <div class="controls">
+                            <textarea class="input-xlarge" id="address2"><%= parental.address %></textarea>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="email2">Email Address</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="email2" value="<%= parental.email %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="phone2">Phone</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="phone2" value="<%= parental.phone %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="mobile2">Mobile</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="mobile2" value="<%= parental.mobile %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="occupation">Occupation</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="occupation" value="<%= parental.occupation %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="skills">Skills/Hobbies</label>
+                        <div class="controls">
+                            <textarea class="input-xlarge" id="skills"><%= parental.skills %></textarea>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="assist">Can Assist Group</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input type="checkbox" name="assist" value="true" id="assist" <% if (parental.assist) { print('checked="checked"'); } %>>
+                                Yes, I will be able to assist
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="assist" value="false" <% if (!parental.assist) { print('checked="checked"'); } %>>
+                                I am unable to assist the Group
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                </form>
+            </div>
+
+            <div class="tab-pane" id="emergencyTab">
+                <form class="form-horizontal">
+                    <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="firstname3">First Name</label>
+                        <div class="controls">
+                            <input type="text" class="input-medium" id="firstname3" value="<%= emergency.firstname %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+
+                    <div class="control-group">
+                        <label class="control-label" for="lastname3">Last Name</label>
+                        <div class="controls">
+                            <input type="text" class="input-medium" id="lastname3" value="<%= emergency.lastname %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="relation">Relation</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="relation"  value="<%= emergency.relation %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="address3">Address</label>
+                        <div class="controls">
+                            <textarea class="input-xlarge" id="address3"><%= emergency.address %></textarea>
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="phone3">Phone</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="phone3" value="<%= emergency.phone %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="mobile3">Mobile</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" id="mobile3" value="<%= emergency.mobile %>">
+                        </div> <!-- /controls -->
+                    </div> <!-- /control-group -->
+
+                </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</div>
