@@ -33,6 +33,12 @@ app.get('/user', function(request, response){
     });
 });
 
+app.post('/contacts', function(req, res){
+    console.log(req);
+    console.log(req.res);
+    //sys.puts(sys.inspect(req));
+});
+
 app.get('/contacts', function(request, response){
 
     if (request.session.loggedIn){

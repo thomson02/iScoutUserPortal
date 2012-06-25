@@ -18,6 +18,24 @@ define([
         /* VIEW */
         publics.View = Backbone.View.extend({
 
+            events: {
+              'blur :input': 'save'
+            },
+
+            save: function(){
+                this.model.set({ test: "ASDFGHJKL" }, {
+                    wait:true,
+                    success:function(model, response) {
+                        console.log('Successfully saved!');
+                    },
+                    error: function(model, error) {
+                        console.log(model.toJSON());
+                        console.log('error.responseText');
+                    }
+                });
+                this.model.save();
+            },
+
             el: $("#main-content"),
 
             initialize: function(options){

@@ -8,6 +8,12 @@ require.config({
         backbone: 'lib/backbone/backbone-wrapper',
         text: 'lib/require/plugins/text',
         order: 'lib/require/plugins/order'
+    },
+    shim: {
+        'backbone': {
+            deps: ['underscore', 'jQueryWithBootstrap']   ,
+            exports: 'Backbone'
+        }
     }
 });
 
