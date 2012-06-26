@@ -5,7 +5,9 @@ define([
     'backbone',
     'app/partials/accountDetails',
     'app/partials/contacts',
-    'app/partials/consents'
+    'app/partials/consents',
+    'app/partials/medical'
+
 ],
     function(
         _,
@@ -13,7 +15,8 @@ define([
         Backbone,
         AccountDetails,
         Contacts,
-        Consents) {
+        Consents,
+        Medical) {
 
         var AppRouter = Backbone.Router.extend({
             routes: {
@@ -45,6 +48,9 @@ define([
 
             medical: function(){
                 this.initPageName("Medical Info", "icon-heart");
+                var medical = new Medical.Model();
+                new Medical.View( { model: medical });
+                medical.fetch();
             },
 
             consents: function() {

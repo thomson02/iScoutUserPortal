@@ -6,8 +6,7 @@ require.config({
         jQueryWithBootstrap: 'lib/require/jQueryWithBootstrap',
         underscore: 'lib/underscore/underscore-wrapper',
         backbone: 'lib/backbone/backbone-wrapper',
-        text: 'lib/require/plugins/text',
-        order: 'lib/require/plugins/order'
+        text: 'lib/require/plugins/text'
     },
     shim: {
         'backbone': {

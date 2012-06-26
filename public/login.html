@@ -71,7 +71,7 @@
 	
 	<div id="login-content" class="clearfix">
 	
-	<form action="./">
+	<form id="loginForm">
 				<fieldset>
 					<div class="control-group">
 						<label class="control-label" for="username">Username</label>
@@ -117,10 +117,26 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="scripts/lib/jquery/jquery-1.7.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+
+        $("#loginForm").submit(function(e){
+            e.preventDefault();
+            $.post('/login', { uname: $("#username").val(), pword: $("#password").val() }, function(r){
+                if (r.result === "success"){
+                    window.location = r.redirectPath;
+                }
+                else {
+                    alert(r.message);
+                }
+            });
+        });
+    });
+</script>
 
 
-<script src="scripts/lib/bootstrap/bootstrap.js"></script>
 
   </body>
 </html>
