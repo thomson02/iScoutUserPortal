@@ -5,11 +5,11 @@
 // The main application script, ties everything together.
 var express = require('express');
 var mongoose = require('mongoose');
-var config = require('./config.js');
 var app = express.createServer(express.logger());
+var redisStore = require('connect-redis')(express);
 
 // Connect to Mongo when app initializes
-mongoose.connect(config.creds.mongoose_auth);
+mongoose.connect(process.env.MONGOOSE_AUTH);
 
 // Configure the server
 app.configure(function(){
@@ -17,7 +17,7 @@ app.configure(function(){
         app.use(express.static(__dirname + '/public'));
         app.use(express.bodyParser());
         app.use(express.cookieParser());
-        app.use(express.session({ secret: config.creds.sessionPassword }));
+        app.use(express.session({ secret: process.env.SESSION_AUTH, store: new redisStore }));
         app.use(app.router);
     }
 );
