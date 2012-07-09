@@ -4,12 +4,9 @@
 
 // The main application script, ties everything together.
 var express = require('express');
-var mongoose = require('mongoose');
-var app = express.createServer(express.logger());
-var redisStore = require('connect-redis')(express);
-
-// Connect to Mongo when app initializes
-mongoose.connect(process.env.MONGOOSE_AUTH);
+var MongoStore = require('connect-mongo')(express);
+var mongo = require('mongoose');
+var app = express.createServer();
 
 // Configure the server
 app.configure(function(){
@@ -17,11 +14,18 @@ app.configure(function(){
         app.use(express.static(__dirname + '/public'));
         app.use(express.bodyParser());
         app.use(express.cookieParser());
-        app.use(express.session({ secret: process.env.SESSION_AUTH, store: new redisStore }));
+        app.use(express.session({
+            secret: process.env.SESSION_AUTH,
+            store: new MongoStore({
+                url : process.env.MONGOLAB_URI
+            })
+        }));
         app.use(app.router);
     }
 );
 
+// Setup DB Access
+mongo.connect(process.env.MONGOLAB_URI);
 
 ///////////////////////////////////////////////////////////
 // UNPROTECTED ROUTES                                    //
